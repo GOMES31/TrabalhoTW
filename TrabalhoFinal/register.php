@@ -1,17 +1,20 @@
 <html>
-<body style="background-image: url('/imgs/estadio.jpg')">
+<body style="background: url('./imgs/estadio.jpg') no-repeat center center fixed; background-size: cover;">
 <?php
+
+session_start();
+
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
 
     if(empty($username) || empty($password) || empty($confirmPassword)){
-        print "<script>alert('Preencha os campos obrigatórios!');
-        location.href='register.html'; </script>";
+        $_SESSION['errors'] = 'Preencha os campos obrigatórios!';
+        header('Location: registerpage.php');
     }
     else if ($password !== $confirmPassword) {
-        print "<script>alert('As passwords não coincidem!');
-        location.href='register.html'; </script>";
+        $_SESSION['errors'] = 'As passwords não coincidem!';
+        header('Location: registerpage.php');
     }
     else{
         header("Location: initialpage.html");

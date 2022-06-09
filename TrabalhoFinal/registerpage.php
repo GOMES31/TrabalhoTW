@@ -36,17 +36,30 @@
                 <div class="col d-flex justify-content-center">
                     <!-- Checkbox -->
                     <div class="form-check">
-                        <br>
-                        <br>
                         <!-- Submit button -->
+                        <br>
+                        <br>
                         <button type="submit" class="menuButton">Criar Conta</button>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center" id="criarconta">
+            <div class="text-center" id="iniciarsessao">
                 <p>Já tem uma conta?<a href="login.html">Iniciar sessão</a></p>
             </div>
+
+            <?php
+
+            session_start();
+
+                if(isset($_SESSION['errors'])){
+                    $error = $_SESSION['errors'];
+                    echo '<p style="color: lightcoral;">$error$</p>';
+                   //echo $_SESSION['errors'];
+                }
+
+            session_unset();
+            ?>
         </form>
     </div>
 </body>
