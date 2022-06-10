@@ -16,7 +16,7 @@ session_start();
         header('Location: egisterpage.php');
     }
     else{
-        header("Location: initialpage.html");
+        header("Location: initialpage.php");
         print "<script>alert('Logado com sucesso!');</script>";
         exit;
     }

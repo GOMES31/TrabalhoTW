@@ -45,7 +45,7 @@
             </div>
 
             <div class="text-center" id="iniciarsessao">
-                <p>Já tem uma conta?<a href="login.html">Iniciar sessão</a></p>
+                <p>Já tem uma conta?<a href="loginpage.php">Iniciar sessão</a></p>
             </div>
 
             <?php
