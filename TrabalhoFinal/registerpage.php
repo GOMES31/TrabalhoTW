@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Register Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registerandlogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -49,15 +49,10 @@
             </div>
 
             <?php
-
             session_start();
-
                 if(isset($_SESSION['errors'])){
-                    $error = $_SESSION['errors'];
-                    echo '<p style="color: lightcoral;">$error$</p>';
-                   //echo $_SESSION['errors'];
+                   echo $_SESSION['errors'];
                 }
-
             session_unset();
             ?>
         </form>
