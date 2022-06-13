@@ -10,22 +10,20 @@ session_start();
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
-    if(empty($username) || empty($password) || empty($confirmPassword)){
-        $_SESSION['errors'] = '*Preencha todos os campos!';
-        header('Location: registerpage.php');
-        closeCon($conn);
-    }
-    else if($password !== $confirmPassword) {
-        $_SESSION['errors'] = '*As passwords não coincidem!';
-        header('Location: registerpage.php');
-        closeCon($conn);
-        exit;
-    }
+        if(empty($username) || empty($password) || empty($confirmPassword)){
+            $_SESSION['errors'] = '*Preencha todos os campos!';
+            header('Location: registerpage.php');
+            closeCon($conn);
+        }
+        else if($password !== $confirmPassword) {
+            $_SESSION['errors'] = '*As passwords não coincidem!';
+            header('Location: registerpage.php');
+            closeCon($conn);
+            exit;
+        }
 
     $query = "SELECT * from tbl_cliente WHERE Username=$username";
     $results= mysqli_query($conn,$query);
-
-    var_dump($results);
 
     if($results==false){
         //Se não existir utilizador, cria conta e inicia sessão automaticamente e adiciona os dados à base de dados
@@ -36,7 +34,7 @@ session_start();
         $stmt = $conn->prepare(
              "INSERT INTO tbl_cliente (Username, Password) VALUES (?, ?)"
         );
-         $stmt->bind_param($newUser,$newUserPass);
+         $stmt->bind_param('ss',$newUser,$newUserPass);
          $stmt->execute();
 
         // Iniciar sessão e setar o que é preicso para logar
@@ -50,17 +48,11 @@ session_start();
         exit;
     }
     else {
-        while ($results->fetch_assoc()) {
-            $user = $results['username'];
-
-            if ($user == $username) {
-                $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
-                header('Location: registerpage.php');
-                closeCon($conn);
-                exit;
-            }
-        }
-    }
+          closeCon($conn);
+          $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
+          header('Location: registerpage.php');
+          exit;
+       }
  ?>
 </body>
 </html>
