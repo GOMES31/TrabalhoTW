@@ -21,7 +21,8 @@
                     <img src="imgs/small_logo.jpg">
                 </div>
                 <div class="nav navbar-nav navbar-right">
-                    <button type="submit" class="btn">Login</button>
+                    <!--Login Button-->
+                    <button class="btn" href="loginpage.php">Login</button>
                 </div>
             </div>   
         </nav>

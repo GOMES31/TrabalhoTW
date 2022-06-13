@@ -12,5 +12,13 @@
 </head>
 <body>
   <h1>HELLO WORLD</h1>
+<?php
+
+session_start();
+echo $_SESSION['username'];
+
+
+?>
+
 </body>
 </html>

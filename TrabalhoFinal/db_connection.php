@@ -5,7 +5,7 @@ function OpenCon()
     $dbhost = 'localhost';
     $dbuser = 'root';
     $dbpass = '';
-    $db = 'users';
+    $db = 'db_users';
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Connect failed: %s\n". $conn -> error);
     mysqli_select_db($conn,$db);
 
