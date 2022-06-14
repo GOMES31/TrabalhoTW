@@ -22,7 +22,7 @@
                 </div>
                 <div class="nav navbar-nav navbar-right">
                     <!--Login Button-->
-                    <button class="btn" href="loginpage.php">Login</button>
+                    <button class="btn"><a href="loginpage.php">Login</a></button>
                 </div>
             </div>   
         </nav>

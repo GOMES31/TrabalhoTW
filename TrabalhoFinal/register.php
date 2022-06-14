@@ -22,8 +22,9 @@ session_start();
             exit;
         }
 
-    $query = "SELECT * from tbl_cliente WHERE Username=$username";
+    $query = 'SELECT * from tbl_cliente WHERE Username=$username';
     $results= mysqli_query($conn,$query);
+    var_dump($results);
 
     if($results==false){
         //Se não existir utilizador, cria conta e inicia sessão automaticamente e adiciona os dados à base de dados
@@ -47,11 +48,11 @@ session_start();
         closeCon($conn);
         exit;
     }
-    else {
-          closeCon($conn);
-          $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
-          header('Location: registerpage.php');
-          exit;
+      else{
+            $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
+            header('Location: registerpage.php');
+            closeCon($conn);
+            exit;
        }
  ?>
 </body>

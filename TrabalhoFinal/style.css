@@ -26,19 +26,29 @@ body {
     font-weight: bold;
     background: none;
     color:white;
+    background: black;
 }
 
-.btn:hover {
-    margin-top: 7px;
-    margin-right: 7px;
-    font-weight: bold;
-    color: #36454f;
-    background: #ffd7a3;
-}
-
-a{
+.btn a{
     text-decoration: none;
     color: white;
+}
+
+.btn a:hover{
+    text-decoration: none;
+    color: white;
+    background: black;
+}
+
+.btn a:active{
+    color: white;
+    background: black;
+}
+
+
+.btn a:after{
+    color: white;
+    background: black;
 }
 
 .container {
