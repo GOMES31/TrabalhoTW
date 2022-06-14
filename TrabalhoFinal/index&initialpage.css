@@ -3,7 +3,7 @@
 }
 
 body {
-    background: url('./imgs/estadio.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./imgs/estadio.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
