@@ -16,13 +16,18 @@
 <body>
     <section>
         <nav class="navbar">
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse container-fluid">
                 <div class="nav navbar-nav navbar-left">
                     <p></p>
                     <img src="imgs/small_logo.jpg">
                 </div>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button type="submit" class="fa fa-search"></button>
+                    </div>
+                </form>
                 <div class="nav navbar-nav navbar-right">
-                    <!--Login Button-->
                     <a href="loginpage.php">
                     <button class="btn">Login</button>
                     </a>

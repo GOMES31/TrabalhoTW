@@ -27,7 +27,13 @@ body {
     color:white;
     background: black;
 }
-
+.fa-search{
+  background: none;
+  color: white;
+  border: none;
+  border-left: none;
+  font-size: large;
+}
 .btn:hover {
     margin-top: 7px;
     margin-right: 7px;
