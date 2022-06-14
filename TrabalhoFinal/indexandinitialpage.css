@@ -34,6 +34,32 @@ body {
   border-left: none;
   font-size: large;
 }
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #86c232;
+    color: #36454f;
+}
+.dropdown-menu a:hover {
+    background-color: #86c232;
+    color: #36454f;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
 .btn:hover {
     margin-top: 7px;
     margin-right: 7px;
