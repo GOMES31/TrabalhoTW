@@ -58,6 +58,18 @@ $pdo = openPDO();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$confirmPassword = $_POST['confirmPassword'];
+if(empty($username) || empty($password) || empty($confirmPassword)){
+    $_SESSION['errors'] = '*Preencha todos os campos!';
+    header('Location: registerpage.php');
+    closePDO($pdo);
+}
+else if($password !== $confirmPassword) {
+    $_SESSION['errors'] = '*As passwords não coincidem!';
+    header('Location: registerpage.php');
+    closePDO($pdo);
+    exit;
+}
 $sql = "SELECT * FROM tbl_cliente WHERE Username= ?";
 $stmt = $pdo->prepare($sql);
 
