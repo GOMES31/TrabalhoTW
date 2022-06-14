@@ -21,7 +21,7 @@
                 </div>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search...">
+                        <input id="searchInput" type="text" class="form-control" placeholder="Search...">
                         <button type="submit" class="fa fa-search"></button>
                     </div>
                 </form>
@@ -29,7 +29,6 @@
                   <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">AccountName</button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item-text text-center"> AccountName</li>
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-toolbox"></i> Account settings</a></li>
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i> Logout</a></li>
