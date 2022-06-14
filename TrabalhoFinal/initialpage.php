@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="indexandinitialpage.css">
+    <link rel="stylesheet" href="index&initialpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -32,7 +32,7 @@
                         <li class="dropdown-item-text text-center"> AccountName</li>
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-toolbox"></i> Account settings</a></li>
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i> Logout</a></li>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i> Logout</a></li>
                       </ul>
                   </li>
                 </div>
