@@ -18,11 +18,14 @@
         <nav class="navbar">
             <div class="collapse navbar-collapse">
                 <div class="nav navbar-nav navbar-left">
+                    <p></p>
                     <img src="imgs/small_logo.jpg">
                 </div>
                 <div class="nav navbar-nav navbar-right">
                     <!--Login Button-->
-                    <button class="btn" href="loginpage.php">Login</button>
+                    <a href="loginpage.php">
+                    <button class="btn">Login</button>
+                    </a>
                 </div>
             </div>   
         </nav>
@@ -32,7 +35,6 @@
         <div class="row col-12">
             <div>
             <img class="img" src="imgs/logo.jpg"></img>
-            <h3>Dream Team</h3>
             <h4>Bem vindos ao nosso website, aqui pode saber todos os dados dos seus jogadores de futebol favoritos! E para animar a sua estadia no nosso website desenvolvemos uma ferramenta do tipo "squad builder" em que pode juntar os seus jogadores favoritos para criar e guardar as suas "Dream Team's".</h4>
             </div>
         </div>
@@ -43,9 +45,9 @@
     <div class="row">
         <hr>
         Contact us on social networks!    
-        <i class="fab fa-facebook-f white-text"> </i>
-        <i class="fab fa-twitter white-text"> </i>
-        <i class="fab fa-instagram white-text"> </i>
+        <i class="fab fa-facebook"> </i>
+        <i class="fab fa-twitter"> </i>
+        <i class="fab fa-instagram"> </i>
     </div>
 </div>
 </section>

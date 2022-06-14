@@ -1,6 +1,5 @@
 :root{
     --Inter: 'Inter', sans-serif;
-
 }
 
 body {
@@ -17,7 +16,7 @@ body {
     margin-top: 1%;
     width: 100%;
     height: 50px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.50);
 }
 
 .btn {
@@ -31,9 +30,8 @@ body {
 .btn:hover {
     margin-top: 7px;
     margin-right: 7px;
-    font-weight: bold;
+    background: #86c232;
     color: #36454f;
-    background: #ffd7a3;
 }
 
 a{
@@ -44,14 +42,11 @@ a{
 .container {
     text-align: center;
 }
-.container h3 {
-    color: white;
-    font-weight: bold;
-}
+
 
 .container h4 {
-    color: #ffd7a3;
-    
+    color: white;
+    border-radius: 5px;
 }
 
 img {
@@ -60,8 +55,24 @@ img {
 }
 
 .footer {
-    margin-top: 10%;
-    color: #c1a46b;
-    font-weight: bold;
+    margin-top: 14%;
+    color: #86c232;
     text-align: center;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fab {
+    width: 15px;
+    height: 15px;
 }
