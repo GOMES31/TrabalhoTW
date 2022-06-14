@@ -46,7 +46,7 @@ body {
     position: relative;
     display: inline-block;
 }
-.dropdown:hover .dropbtn {
+.dropdown .dropdown-item:hover {
     background-color: #86c232;
     color: #36454f;
 }
