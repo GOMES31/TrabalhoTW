@@ -65,6 +65,7 @@ a{
 
 .container {
     text-align: center;
+    margin-top: 5%;
 }
 
 
@@ -79,7 +80,8 @@ img {
 }
 
 .footer {
-    margin-top: 14%;
+    margin-top: 30%;
+    margin-bottom: 5%;
     color: #86c232;
     text-align: center;
 }
@@ -99,4 +101,8 @@ img {
 .fab {
     width: 15px;
     height: 15px;
+}
+
+#searchInput{
+    width: 400px;
 }
