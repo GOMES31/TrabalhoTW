@@ -50,6 +50,10 @@ body {
     background-color: #86c232;
     color: #36454f;
 }
+.dropdown .dropdown-item {
+    color: white;
+}
+
 .dropdown-menu a:hover {
     background-color: #86c232;
     color: #36454f;
