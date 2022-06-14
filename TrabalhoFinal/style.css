@@ -25,6 +25,7 @@ body {
     font-weight: bold;
     background: none;
     color:white;
+    background: black;
 }
 
 .btn:hover {
@@ -37,6 +38,23 @@ body {
 a{
     text-decoration: none;
     color: white;
+}
+
+.btn a:hover{
+    text-decoration: none;
+    color: white;
+    background: black;
+}
+
+.btn a:active{
+    color: white;
+    background: black;
+}
+
+
+.btn a:after{
+    color: white;
+    background: black;
 }
 
 .container {
