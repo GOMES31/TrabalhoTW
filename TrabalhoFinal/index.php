@@ -47,8 +47,7 @@
 </div>
 
 <div class="footer">
-    <div class="row">
-        <hr>
+    <div class="row" id="footer">
         Contact us on social networks!
         <i class="fab fa-facebook"> </i>
         <i class="fab fa-twitter"> </i>

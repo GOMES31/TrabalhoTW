@@ -95,16 +95,24 @@ a{
 }
 
 .information{
-    color: white;
     width: auto;
     height: 170px;
     padding: 5px;
     background-color: black;
+    opacity: 80%;
+    border: none;
+    border-radius: 6px;
 }
 
 .information p{
     margin-top: 20px;
     font-size: 15px;
+    color: white;
+}
+
+.information h3{
+    color: #86c232;
+    font-weigth: bold;
 }
 
 img {
@@ -113,11 +121,17 @@ img {
 }
 
 .footer {
-    margin-top: 35%;
+    margin-top: 22%;
     margin-bottom: 3%;
-    color: #86c232;
     text-align: center;
+    opacity: 70%;
+    background-color: black;
+    color: #86c232;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
 }
+
 
 .fa-facebook {
     color: white;
@@ -132,8 +146,9 @@ img {
 }
 
 .fab {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 #searchInput{
