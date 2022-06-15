@@ -72,7 +72,7 @@
                                     <div class="m_box">
                                         <div class="border-bottom font-weight-bold w-100 pb-1"> Social Media Links</div>
                                         <div class="row mt-3">
-                                            <div class="col-12 pl-0">
+                                            <div class="socials col-12 pl-0">
                                                 <i class="fab fa-twitter twitter-color"></i>
                                                 N\A
                                             </div>
@@ -80,21 +80,21 @@
 
 
                                         <div class="row mt-3">
-                                            <div class="col-12 pl-0">
+                                            <div class="socials col-12 pl-0">
                                                 <i class="fab fa-facebook facebook-color"></i>
                                                 N\A
                                             </div>
                                         </div>
 
                                         <div class="row mt-3">
-                                            <div class="col-12 pl-0">
+                                            <div class="socials col-12 pl-0">
                                                 <i class="fab fa-youtube youtube-color"></i>
                                                 N\A
                                             </div>
                                         </div>
 
                                         <div class="row mt-3">
-                                            <div class="col-12 pl-0">
+                                            <div class="socials col-12 pl-0">
                                                 <i class="fab fa-twitch twitch-color"></i>
                                                 N\A
                                             </div>
