@@ -38,11 +38,11 @@
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout
                                 <?php
-                                    session_unset();
-                                    session_destroy();
-                                ?>Logout</a>
+                                session_unset();
+                                session_destroy();
+                                ?></a>
                             </li>
                     </ul>
                 </li>
