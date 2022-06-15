@@ -22,7 +22,7 @@ if (empty($username) || empty($password) || empty($confirmPassword)) {
     closePDO($pdo);
     exit;
 }
-$sql = "SELECT * FROM tbl_cliente WHERE Username= ?";
+$sql = "SELECT * FROM tbl_cliente WHERE Username=?";
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute([$username]);

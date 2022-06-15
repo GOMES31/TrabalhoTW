@@ -24,14 +24,14 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="username">Username:</label>
                 <br>
-                <input type="text" id="username" class="form-control login-inputs"/>
+                <input type="text" id="username" class="form-control login-inputs" name="username"/>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password:</label>
                 <br>
-                <input type="password" id="password" class="form-control login-inputs"/>
+                <input type="password" id="password" class="form-control login-inputs" name="password"/>
             </div>
             <!-- 2 column grid layout for inline styling -->
             <div class="row mb-4">
