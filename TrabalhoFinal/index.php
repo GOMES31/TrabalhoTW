@@ -22,12 +22,6 @@
                 <p></p>
                 <a href="index.php"><img src="imgs/dreamteam.png"></a>
             </div>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-                     <button type="submit" id="searchIcon" class="fa fa-search"></button>
-                </div>
-            </form>
             <div class="nav navbar-nav navbar-right">
                 <a href="loginpage.php"><button class="btn">Login</button></a>
                 <a href="registerpage.php"><button class="btn">Register</button></a>

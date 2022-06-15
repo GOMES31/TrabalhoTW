@@ -52,16 +52,16 @@
                 <div class="row col-12">
                     <div class="information">
                         <div class="username-header">
-                            <p class="text-left" style="color:white; margin-left:2%; font-size: 35px;">Darkgamer72</p>
+                            <p class="username text-left" >Darkgamer72</p>
                         </div>
-                        <div style="width: 120px; float: left; margin-top: 2%;">
-                            <div class="user-sub-header" style="color:#838995;">Join Date</div>
-                            <div class="user-sub-header-content" style="color:white;">17.01.19</div>
+                        <div class="specs">
+                            <div class="user-sub-header">Join Date</div>
+                            <div class="user-sub-header-content">17.01.19</div>
                         </div>
-                        <div style="width: 120px; float:left; margin-top: 2%;">
-                            <div class="user-sub-header" style="color:#838995;">Squads</div>
-                            <div class="user-sub-header-content" style="color:white;">0</div>
-                            <div class="user-sub-header-content"><button class="squadBtn btn">Go to my squads</button></div>
+                        <div class="specs">
+                            <div class="user-sub-header">Squads</div>
+                            <div class="user-sub-header-content">0</div>
+                            <div><button class="squadBtn btn">Go to my squads</button></div>
                         </div>
                     </div>
                     <div class="row">

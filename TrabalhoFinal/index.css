@@ -28,13 +28,6 @@ body {
     color:white;
     background: black;
 }
-.fa-search{
-  background: none;
-  color: white;
-  border: none;
-  border-left: none;
-  font-size: large;
-}
 .btn:hover {
     margin-top: 7px;
     margin-right: 7px;
@@ -129,18 +122,6 @@ img {
     width: 20px;
     height: 20px;
     margin-left: 5px;
-}
-
-#searchInput{
-    width: 400px;
-}
-#searchInput:hover, #searchInput:focus {
-    border-color: #86c232;
-}
-
-#searchIcon{
-    display: inline;
-    padding-top: 6px;
 }
 
 #loader{
