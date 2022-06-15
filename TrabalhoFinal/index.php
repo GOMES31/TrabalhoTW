@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<div id="preloader"></div>
+<div id="loader"></div>
 <section>
     <nav class="navbar">
         <div class="collapse navbar-collapse container-fluid">
@@ -58,9 +58,8 @@
         </div>
     </div>
 </section>
-<!<script src="script.js">loadingPage()</script>>
-<!--<script>
-    let loader = document.getElementById("preloader");
+<script>
+    let loader = document.getElementById("loader");
 
 window.addEventListener("load",function (){
     var delay = 1700;
@@ -69,6 +68,6 @@ window.addEventListener("load",function (){
         loader.style.display = "none";
     },delay);
 });
-</script>-->
+</script>
 </body>
 </html>

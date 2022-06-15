@@ -130,6 +130,9 @@ img{
 #searchInput{
     width: 400px;
 }
+#searchInput:hover, #searchInput:focus {
+    border-color: #86c232;
+}
 
 #searchIcon{
     display: inline;

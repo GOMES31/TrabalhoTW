@@ -143,11 +143,12 @@ img {
     padding-top: 6px;
 }
 
-#preloader{
+#loader{
     background: #333333 url("imgs/loading.gif") no-repeat center center;
     background-size: 15%;
     height: 150vh;
     width: 100%;
     position: fixed;
     z-index: 100;
+    animation: 2s infinite ease-in;
 }

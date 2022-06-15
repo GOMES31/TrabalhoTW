@@ -5,22 +5,86 @@
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('./imgs/estadio.jpg') no-repeat center center fixed;
     background-size: cover;
-
-}
-
-
-section{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
-.header{
-    position: relative;
+.navbar {
+    margin-top: 1%;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.50);
 }
 
-.topleft{
-    position: absolute;
-    top: 20px;
-    left: 20px;
+.btn {
+    margin-top: 7px;
+    margin-right: 7px;
+    font-weight: bold;
+}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+}
+.dropdown .dropdown-item:hover {
+    background-color: #86c232;
+    color: #36454f;
+}
+.dropdown .dropdown-item {
+    color: white;
+}
+.dropdown-menu a:hover {
+    background-color: #86c232;
+    color: #36454f;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: black;
+    border-radius: 7px;
+}
+.btn:hover {
+    margin-top: 7px;
+    margin-right: 7px;
+    background: #86c232;
+    color: #36454f;
+}
+.container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.footer {
+    margin-top: 22%;
+    margin-bottom: 3%;
+    text-align: center;
+    opacity: 70%;
+    background-color: black;
+    color: #86c232;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fab {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
