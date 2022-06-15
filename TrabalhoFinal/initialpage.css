@@ -23,9 +23,6 @@ body {
     margin-top: 7px;
     margin-right: 7px;
     font-weight: bold;
-    background: none;
-    color:white;
-    background: black;
 }
 .fa-search{
   background: none;
@@ -42,10 +39,6 @@ body {
     border: none;
     border-radius: 7px;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
 .dropdown .dropdown-item:hover {
     background-color: #86c232;
     color: #36454f;
@@ -53,7 +46,6 @@ body {
 .dropdown .dropdown-item {
     color: white;
 }
-
 .dropdown-menu a:hover {
     background-color: #86c232;
     color: #36454f;
@@ -61,7 +53,6 @@ body {
 .dropdown:hover .dropdown-menu {
     display: block;
     background-color: black;
-    color: white;
     border-radius: 7px;
 }
 .btn:hover {
@@ -69,59 +60,6 @@ body {
     margin-right: 7px;
     background: #86c232;
     color: #36454f;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-.btn a:hover{
-    text-decoration: none;
-    color: white;
-    background: black;
-}
-
-.btn a:active{
-    color: white;
-    background: black;
-}
-
-
-.btn a:after{
-    color: white;
-    background: black;
-}
-
-.container {
-    text-align: center;
-    margin-top: 5%;
-}
-
-.information{
-    width: auto;
-    height: 170px;
-    padding: 5px;
-    background-color: black;
-    opacity: 80%;
-    border: none;
-    border-radius: 6px;
-}
-
-.information p{
-    margin-top: 20px;
-    font-size: 15px;
-    color: white;
-}
-
-.information h3{
-    color: #86c232;
-    font-weight: bold;
-}
-
-img {
-    width: 70%;
-    height: 70%;
 }
 
 .footer {
