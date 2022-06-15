@@ -22,7 +22,7 @@
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input id="searchInput" type="text" class="form-control" placeholder="Search...">
-                    <button type="submit" class="fa fa-search"></button>
+                    <button type="submit" id="searchIcon" class="fa fa-search"></button>
                 </div>
             </form>
             <div class="nav navbar-nav navbar-right">
@@ -30,18 +30,20 @@
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
                         session_start();
-                            if (isset($_SESSION['username'])) {
-                                echo $_SESSION['username'];
-                            }
+                        if (isset($_SESSION['username'])) {
+                            echo $_SESSION['username'];
+                        }
                         session_unset();
                         ?></button>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-toolbox"></i>
-                                Account settings</a></li>
-                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My
-                                Profile</a></li>
-                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i
-                                        class="fa fa-power-off"></i> Logout</a></li>
+                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-toolbox"></i>Account settings</a></li>
+                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>
+                                <?php
+                                    session_unset();
+                                    session_destroy();
+                                ?>Logout</a>
+                            </li>
                     </ul>
                 </li>
             </div>
@@ -66,7 +68,7 @@
     <div class="footer">
         <div class="row">
             Contact us on social networks!
-            <a href="https://www.facebook.com/"target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"> </i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"> </i></a>
         </div>

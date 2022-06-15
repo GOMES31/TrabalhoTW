@@ -23,7 +23,7 @@
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-                    <button type="submit" class="fa fa-search"></button>
+                     <button type="submit" id="searchIcon" class="fa fa-search"></button>
                 </div>
             </form>
             <div class="nav navbar-nav navbar-right">

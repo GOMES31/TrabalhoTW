@@ -130,3 +130,8 @@ img{
 #searchInput{
     width: 400px;
 }
+
+#searchIcon{
+    display: inline;
+    padding-top: 6px;
+}
