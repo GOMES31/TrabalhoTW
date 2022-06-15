@@ -25,11 +25,11 @@ body {
     font-weight: bold;
 }
 .fa-search{
-  background: none;
-  color: white;
-  border: none;
-  border-left: none;
-  font-size: large;
+      background: none;
+      color: white;
+      border: none;
+      border-left: none;
+      font-size: large;
 }
 .dropbtn {
     background-color: black;
