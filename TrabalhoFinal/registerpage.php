@@ -18,7 +18,7 @@
 </div>
 <section>
     <div class="menu">
-        <h2>Criar Conta</h2>
+        <h2>Register</h2>
         <form method="POST" action="register.php">
             <!--Username input -->
             <div class="form-outline mb-4">
@@ -45,7 +45,7 @@
                         <!-- Submit button -->
                         <br>
                         <br>
-                        <button type="submit" class="menuButton">Criar Conta</button>
+                        <button type="submit" class="menuButton">Register</button>
                     </div>
                 </div>
             </div>

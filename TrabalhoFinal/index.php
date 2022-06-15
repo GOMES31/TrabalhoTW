@@ -12,7 +12,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
+
 <body>
+<div id="preloader"></div>
 <section>
     <nav class="navbar">
         <div class="collapse navbar-collapse container-fluid">
@@ -27,13 +29,11 @@
                 </div>
             </form>
             <div class="nav navbar-nav navbar-right">
-                <a href="loginpage.php">
-                    <button class="btn">Login</button>
-                </a>
+                <a href="loginpage.php"><button class="btn">Login</button></a>
+                <a href="registerpage.php"><button class="btn">Register</button></a>
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="row">
             <div class="row col-12">
@@ -58,5 +58,6 @@
         </div>
     </div>
 </section>
+<script src="script.js">loadingPage()</script>
 </body>
 </html>

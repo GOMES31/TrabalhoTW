@@ -18,7 +18,7 @@
 </div>
 <section>
     <div class="menu">
-        <h2>Iniciar Sessão</h2>
+        <h2>Login</h2>
         <form method="POST" action="login.php">
             <!--Username input -->
             <div class="form-outline mb-4">
@@ -42,7 +42,7 @@
                         <br>
                         <br>
                         <!-- Submit button -->
-                        <button type="submit" class="menuButton">Iniciar Sessão</button>
+                        <button type="submit" class="menuButton">Login</button>
                     </div>
                 </div>
             </div>
