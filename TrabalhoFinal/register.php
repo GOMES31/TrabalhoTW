@@ -11,12 +11,12 @@ $pdo = openPDO();
 $username = $_POST['username'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirmPassword'];
-if(empty($username) || empty($password) || empty($confirmPassword)){
+if (empty($username) || empty($password) || empty($confirmPassword)) {
     $_SESSION['errors'] = '*Preencha todos os campos!';
     header('Location: registerpage.php');
     closePDO($pdo);
-}
-else if($password !== $confirmPassword) {
+    exit;
+} else if ($password !== $confirmPassword) {
     $_SESSION['errors'] = '*As passwords não coincidem!';
     header('Location: registerpage.php');
     closePDO($pdo);
@@ -28,7 +28,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$username]);
 $user = $stmt->fetch();
 
-if($stmt->rowCount() == 0){
+if ($stmt->rowCount() == 0) {
     //Se não existir utilizador, cria conta e inicia sessão automaticamente e adiciona os dados à base de dados
     $newUser = $_POST['username'];
     $newUserPass = $_POST['password'];
@@ -43,25 +43,21 @@ if($stmt->rowCount() == 0){
 
     ]);
 
-    $publisher_id = $pdo->lastInsertId();
 
-    echo 'The publisher id ' . $publisher_id . ' was inserted';
-
-    // Iniciar sessão e setar o que é precisopara logar
-    $_SESSION['username']= $newUser;
-    $_SESSION['password']= $newUserPass;
+    // Iniciar sessão e setar o que é preciso para logar
+    $_SESSION['username'] = $newUser;
+    $_SESSION['password'] = $newUserPass;
 
     header("Location: initialpage.php");
     print "<script>alert('Registado com sucesso!');</script>";
     closePDO($pdo);
     exit;
+} else {
+    $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
+    header('Location: registerpage.php');
+    closePDO($pdo);
+    exit;
 }
-  else{
-        $_SESSION['errors'] = '*Já existe um utilizador com esse nome!';
-        header('Location: registerpage.php');
-        closePDO($pdo);
-        exit;
-   }
 
 
 ?>

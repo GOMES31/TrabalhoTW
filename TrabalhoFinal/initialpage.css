@@ -61,6 +61,36 @@ body {
     background: #86c232;
     color: #36454f;
 }
+.container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.information{
+    width: auto;
+    height: 170px;
+    padding: 5px;
+    background-color: black;
+    opacity: 80%;
+    border: none;
+    border-radius: 6px;
+}
+
+.information p{
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+.information h3{
+    color: #86c232;
+    font-weight: bold;
+}
+
+img{
+    width: 70%;
+    height: 70%;
+}
 
 .footer {
     margin-top: 22%;
@@ -74,6 +104,10 @@ body {
     border-radius: 6px;
 }
 
+#dreamteam-large{
+    width: 80%;
+    height: 80%;
+}
 
 .fa-facebook {
     color: white;

@@ -17,15 +17,14 @@ function openPDO()
         PDO::ATTR_EMULATE_PREPARES => false,
     ];
 
-    //$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Connect failed: %s\n". $conn -> error);
-    //mysqli_select_db($conn,$db);
 
-   return new PDO($dsn,$user,$pass,$opt);
+    return new PDO($dsn, $user, $pass, $opt);
 }
 
-function closePDO($pdo){
+function closePDO($pdo)
+{
     {
-        $pdo -> close();
+        $pdo->close();
     }
 }
 

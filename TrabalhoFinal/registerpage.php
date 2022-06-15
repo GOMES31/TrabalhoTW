@@ -11,6 +11,12 @@
     <script src="jquery/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<div class="header">
+    <div class="topleft">
+        <a href="index.php"><img src="imgs/dreamteam.png"></a>
+    </div>
+</div>
+<section>
     <div class="menu">
         <h2>Criar Conta</h2>
         <form method="POST" action="register.php">
@@ -18,18 +24,18 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="username">Username:</label>
                 <br>
-                <input type="text" id="username" name="username" class="form-control login-inputs" />
+                <input type="text" id="username" name="username" class="form-control login-inputs"/>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="password">Password:</label>
                 <br>
-                <input type="password" id="password" name="password" class="form-control login-inputs" />
+                <input type="password" id="password" name="password" class="form-control login-inputs"/>
                 <br>
                 <label class="form-label" for="confirmPassword">Confirm password:</label>
                 <br>
-                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control login-inputs" />
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control login-inputs"/>
             </div>
             <!-- 2 column grid layout for inline styling -->
             <div class="row mb-4">
@@ -50,12 +56,13 @@
 
             <?php
             session_start();
-                if(isset($_SESSION['errors'])){
-                   echo $_SESSION['errors'];
-                }
+            if (isset($_SESSION['errors'])) {
+                echo $_SESSION['errors'];
+            }
             session_unset();
             ?>
         </form>
     </div>
+</section>
 </body>
 </html>
