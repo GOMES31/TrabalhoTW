@@ -58,8 +58,8 @@
         </div>
     </div>
 </section>
-<!--<script src="script.js">loadingPage()</script>-->
-<script>
+<!<script src="script.js">loadingPage()</script>>
+<!--<script>
     let loader = document.getElementById("preloader");
 
 window.addEventListener("load",function (){
@@ -69,6 +69,6 @@ window.addEventListener("load",function (){
         loader.style.display = "none";
     },delay);
 });
-</script>
+</script>-->
 </body>
 </html>
