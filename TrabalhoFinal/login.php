@@ -31,12 +31,12 @@ if (empty($username) || empty($password)) {
         exit;
     }
     // Verifica se o utilizador está ativo caso exista
-    /*else if($activeUser === false){
+    else if($user === false){
         $_SESSION['errors'] = '*Esse utilizador já esta logado no site!';
         header('Location: loginpage.php');
         closePDO($pdo);
         exit;
-    }*/
+    }
     else{
             if($user=$stmt->fetch()){
                 $username = $user['username'];
