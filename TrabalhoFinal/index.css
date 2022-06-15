@@ -134,6 +134,9 @@ img {
 #searchInput{
     width: 400px;
 }
+#searchInput:hover, #searchInput:focus {
+    border-color: #86c232;
+}
 
 #searchIcon{
     display: inline;
@@ -143,7 +146,7 @@ img {
 #preloader{
     background: #333333 url("imgs/loading.gif") no-repeat center center;
     background-size: 15%;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     position: fixed;
     z-index: 100;

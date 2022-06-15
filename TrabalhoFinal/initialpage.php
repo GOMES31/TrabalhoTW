@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
+<body>
 <section>
     <nav class="navbar">
         <div class="collapse navbar-collapse container-fluid">
@@ -36,7 +37,6 @@
                         session_unset();
                         ?></button>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-toolbox"></i>Account settings</a></li>
                         <li><a href="#" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>
                                 <?php
@@ -74,14 +74,5 @@
         </div>
     </div>
 </section>
-<!--
-<?php
-
-session_start();
-echo $_SESSION['username'];
-
-
-?>-->
-
 </body>
 </html>

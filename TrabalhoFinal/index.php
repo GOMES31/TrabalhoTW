@@ -58,6 +58,17 @@
         </div>
     </div>
 </section>
-<script src="script.js">loadingPage()</script>
+<!--<script src="script.js">loadingPage()</script>-->
+<script>
+    let loader = document.getElementById("preloader");
+
+window.addEventListener("load",function (){
+    var delay = 1700;
+
+    setTimeout(function(){
+        loader.style.display = "none";
+    },delay);
+});
+</script>
 </body>
 </html>
