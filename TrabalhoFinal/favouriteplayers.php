@@ -60,13 +60,6 @@
                                     </tr>
 
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td class="btn addbtn"><a href="initialpage.php">Add Players</a></td>
-                                        <td class="btn arrow"><i class="fa fa-arrow-circle-left"></i></td>
-                                        <td class="btn arrow"><i class="fa fa-arrow-circle-right"></i></td>
-                                    </tr>
-                                </tfoot>
                             </table>
                             <div class="col-md-12"></div>
                         </div>

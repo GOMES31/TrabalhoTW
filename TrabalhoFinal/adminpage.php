@@ -30,8 +30,7 @@
                         if (isset($_SESSION['username'])) echo $_SESSION['username'];
                         ?></button>
                     <ul class="dropdown-menu">
-                        <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i
-                                        class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_destroy();?>
                     </ul>
                 </li>
@@ -50,13 +49,12 @@
                             <tr>
                                 <th class="tableHeader text-center">Username</th>
                                 <th class="tableHeader text-center">Status Admin (1=Admin, 0=Client)</th>
-                                <th class="tableHeader text-center">Set Admin</th>
+                                <th class="tableHeader text-center">Remove User</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
                                 include "db_connect.php";
-                                session_start();
 
                                 $pdo = openPDO('db_users');
                                 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
@@ -69,29 +67,20 @@
                                         <td colspan="15"> No users found</td>
                                        </tr>';
                                     } else {
-                                        while($row = $stmt->fetch()) {
+                                        while($row = $stmt->fetch(PDO::FETCH_OBJ)) {
                                             echo "<tr><td>";
                                             echo $row->Username;
                                             echo "</td><td>";
                                             echo $row->StatusAdmin;
-                                            echo "</td>";
-                                            if($row->StatusAdmin==1){
-                                                echo'<td>
-                                            <form method="post" action="removeAdmin.php">
-                                                <button type="submit" name="changeStatus" class="btn">Remove Admin</button>
-                                            </form>
-                                            </tr></tr>';
-                                            }
-                                            else{
-                                                echo'<td>
-                                            <form method="post" action="setAdmin.php">
-                                                <button type="submit" name="changeStatus" class="btn">Set Admin</button>
-                                            </form>
-                                            </tr></tr>';
-                                            }
+                                            echo '</td><td>
+                                            <form method="POST" action="removeUsers.php">
+                                                <button type="submit" name="removeUser" value="<?=$row->Username;?>">Remove User</button>
+                                            </form> 
+                                            </td></tr>';
                                         }
                                 }
-                                ?>
+
+                            ?>
                             </tbody>
                         </table>
                         <div class="col-md-12"></div>
