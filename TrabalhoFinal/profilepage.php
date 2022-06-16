@@ -37,13 +37,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i
                                         class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i
-                                        class="fa fa-power-off"></i>Logout
-                                <?php
-                                session_unset();
-                                session_destroy();
-                                ?></a>
-                        </li>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout </a></li><?php session_destroy();?>
                     </ul>
                 </li>
             </div>
@@ -57,11 +51,7 @@
                     <div class="username-header">
                         <p class="username text-left">
                             <?php
-                            session_start();
-                            if (isset($_SESSION['username'])) {
-                                echo $_SESSION['username'];
-                            }
-                            session_unset();
+                            if (isset($_SESSION['username'])) echo $_SESSION['username'];
                             ?></p>
                     </div>
                     <div class="specs">

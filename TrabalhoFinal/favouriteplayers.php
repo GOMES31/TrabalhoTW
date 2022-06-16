@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My squads Page</title>
+    <title>Favourite Players</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="favouriteplayers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -15,6 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+<div id="loader"></div>
     <section>
         <nav class="navbar">
             <div class="collapse navbar-collapse container-fluid">
@@ -26,20 +27,11 @@
                     <li class="dropdown">
                         <button class="dropbtn btn" data-toggle="dropdown">
                             <?php
-                            session_start();
-                            if (isset($_SESSION['username'])) {
-                                echo $_SESSION['username'];
-                            }
-                            session_unset();
+                            if (isset($_SESSION['username'])) echo $_SESSION['username'];
                             ?></button>
                         <ul class="dropdown-menu">
                             <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                            <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout
-                                    <?php
-                                    session_unset();
-                                    session_destroy();
-                                    ?></a>
-                            </li>
+                            <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_destroy();?>
                         </ul>
                     </li>
                 </div>
@@ -62,23 +54,11 @@
                                 </thead>
                                 <tbody>
                                     <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
+                                        <td>No player found</td>
+                                        <td>No team found</td>
+                                        <td>No nationality found</td>
                                     </tr>
-                                    <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
-                                    </tr>
-                                    <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
-                                    </tr>
-                                    <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
-                                    </tr>
-                                    <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
-                                    </tr>
-                                    <tr class="player_tr_1">
-                                        <td colspan="15">No Results</td>
-                                    </tr>
+
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -104,6 +84,16 @@
             </div>
         </div>
     </section>
+<script>
+    let loader = document.getElementById("loader");
+    window.addEventListener("load", function () {
+        let delay = 1500;
+
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, delay);
+    });
+</script>
 </body>
 
 </html>

@@ -52,11 +52,9 @@
                 <p>Ainda não tem conta?<a href="registerpage.php">Criar conta</a></p>
             </div>
             <?php
-            session_start();
             if (isset($_SESSION['errors'])) {
                 echo $_SESSION['errors'];
             }
-            session_unset();
             ?>
         </form>
     </div>

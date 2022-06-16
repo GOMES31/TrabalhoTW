@@ -1,9 +1,9 @@
 <?php
 
-function openPDO()
+function openPDO($db)
 {
     $host = 'localhost';
-    $database = 'db_users';
+    $database = $db;
     $user = 'root';
     $pass = '';
     $charset = 'utf8mb4';

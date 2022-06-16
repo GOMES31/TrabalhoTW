@@ -6,7 +6,7 @@ include "db_connect.php";
 
 session_start();
 
-$pdo = openPDO();
+$pdo = openPDO('db_users');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -47,20 +47,8 @@ else{
     }
     else{
 
-        //teste unitários:
-         /*echo "Dados validados<br>";
-         echo "User inserido:$username";
-         echo "<br>";
-         echo "Pass inserida:$password";
-         echo "<br>";
-         echo "Username1:$username1";
-         echo "<br>";
-         echo "Password1: $password1";
-         echo "<br>";*/
-
-
-        session_start();
         // Se as condições se verificarem todas até cá
+        session_start();
         $_SESSION['username'] = $username1;
         $_SESSION['password'] = $password1;
         echo "Sessão iniciada";

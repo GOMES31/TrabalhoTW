@@ -6,7 +6,7 @@ include "db_connect.php";
 
 session_start();
 
-$pdo = openPDO();
+$pdo = openPDO('db_users');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -43,7 +43,7 @@ if ($stmt->rowCount() == 0) {
 
     ]);
 
-
+    session_start();
     // Iniciar sessão e setar o que é preciso para logar
     $_SESSION['username'] = $newUser;
     $_SESSION['password'] = $newUserPass;

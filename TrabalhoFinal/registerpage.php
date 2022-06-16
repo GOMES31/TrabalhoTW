@@ -55,11 +55,9 @@
             </div>
 
             <?php
-            session_start();
             if (isset($_SESSION['errors'])) {
                 echo $_SESSION['errors'];
             }
-            session_unset();
             ?>
         </form>
     </div>
