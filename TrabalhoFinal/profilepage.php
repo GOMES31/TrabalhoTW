@@ -65,10 +65,8 @@
                             ?></p>
                     </div>
                     <div class="specs">
-                        <div class="user-sub-header">
-                            <h4>Join Date
-                                <h4>
-                                    <div class="user-sub-header-content"><h5>17.01.19</h5></div>
+                        <div class="user-sub-header"><h4>Join Date<h4>
+                            <div class="user-sub-header-content"><h5>17.01.19</h5></div>
                         </div>
 
                     </div>
@@ -76,13 +74,12 @@
                         <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
                             <div class="user-sub-header-content"><h5>0</h5></div>
                         </div>
-                        <button class="squadBtn btn">See favourite players</button>
+                        <button class="btn"><a href="favouriteplayers.php">See favourite players</a></button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="container pt-5">
                         <div class="row">
-
                             <div class="col-md-4">
                                 <div class="m_box">
                                     <div class="border-bottom font-weight-bold w-100 pb-1"> Social Media Links</div>

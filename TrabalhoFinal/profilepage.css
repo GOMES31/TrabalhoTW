@@ -74,7 +74,7 @@ img{
 }
 
 .footer {
-    margin-top: 22%;
+    margin-top: 23%;
     margin-bottom: 3%;
     text-align: center;
     opacity: 70%;
@@ -120,10 +120,6 @@ img{
     font-size: 16px;
 }
 
-.squadBtn {
-    color: white;
-    background-color: black;
-}
 
 .editS {
     color: white;
@@ -158,6 +154,22 @@ img{
 #favPlayers{
     width: 140px;
 }
+
+.btn{
+    color: white;
+    background: black;
+}
+
+.btn a{
+    color: white;
+    background: black;
+}
+
+.btn:hover{
+    background: #86c232;
+    color: #36454f;
+}
+
 
 #loader{
     background: #333333 url("imgs/loading.gif") no-repeat center center;

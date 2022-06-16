@@ -15,7 +15,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-<div id="loader"></div>
     <section>
         <nav class="navbar">
             <div class="collapse navbar-collapse container-fluid">
@@ -46,23 +45,20 @@
                 </div>
             </div>
         </nav>
-
         <div class="container">
             <div class="row">
                 <div class="row col-12">
                     <div class="information">
-                        <p class="header_mid">My Dream Squads</p>
-
-                        <div class="mysquads">
+                        <p class="header_mid">My Favourite Players</p>
+                        <div class="favplayers">
                             <table class="table table-bordered">
                                 <thead class="squads_table_header main-header">
                                     <tr>
-                                        <th><a href="#" class="table_sort_by">Squad name</a></th>
-                                        <th><a href="#" class="table_sort_by">Formation</a></th>
-                                        <th><a href="#" class="table_sort_by">Created</a></th>
+                                        <th><a href="#" class="table_sort_by">Player Name</a></th>
+                                        <th><a href="#" class="table_sort_by">Team</a></th>
+                                        <th><a href="#" class="table_sort_by">Nationality</a></th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
                                     <tr class="player_tr_1">
                                         <td colspan="15">No Results</td>
