@@ -49,21 +49,44 @@
             <div class="row">
                 <div class="row col-12">
                     <div class="information">
+                        <br>
                         <p class="header_mid">My Favourite Players</p>
                         <div class="favplayers">
                             <table class="table table-bordered">
-                                <thead class="squads_table_header main-header">
+                                <thead>
                                     <tr>
-                                        <th><a href="#" class="table_sort_by">Player Name</a></th>
-                                        <th><a href="#" class="table_sort_by">Team</a></th>
-                                        <th><a href="#" class="table_sort_by">Nationality</a></th>
+                                        <th class="tableHeader">Player Name</th>
+                                        <th class="tableHeader">Team</th>
+                                        <th class="tableHeader">Nationality</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="player_tr_1">
                                         <td colspan="15">No Results</td>
                                     </tr>
+                                    <tr class="player_tr_1">
+                                        <td colspan="15">No Results</td>
+                                    </tr>
+                                    <tr class="player_tr_1">
+                                        <td colspan="15">No Results</td>
+                                    </tr>
+                                    <tr class="player_tr_1">
+                                        <td colspan="15">No Results</td>
+                                    </tr>
+                                    <tr class="player_tr_1">
+                                        <td colspan="15">No Results</td>
+                                    </tr>
+                                    <tr class="player_tr_1">
+                                        <td colspan="15">No Results</td>
+                                    </tr>
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="btn"><a href="initialpage.php">Add Players</a></td>
+                                        <td class="btn"><i class="fa fa-arrow-circle-left"></i></td>
+                                        <td class="btn"><i class="fa fa-arrow-circle-right"></i></td>
+                                    </tr>
+                                </tfoot>
                             </table>
                             <div class="col-md-12"></div>
                         </div>

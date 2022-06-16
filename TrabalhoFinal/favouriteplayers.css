@@ -108,7 +108,11 @@ th {
     width: 33%;
 }
 
-.information .header_mid {
+tfoot{
+    border: none;
+}
+
+.header_mid {
     font-size: 18px;
     color: white;
     font-weight: bold;
@@ -118,14 +122,12 @@ th {
     margin-top: 3%;
 }
 
-.table_sort_by {
+.tableHeader {
     color: #86c232;
 }
 
-.information td{
+td{
     color: #838995;
 }
 
-.information table {
-}
 
