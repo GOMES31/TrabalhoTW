@@ -10,6 +10,8 @@ $pdo = openPDO();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+
+
 if (empty($username) || empty($password)) {
     $_SESSION['errors'] = '*Preencha todos os campos!';
     header('Location: loginpage.php');
@@ -17,54 +19,61 @@ if (empty($username) || empty($password)) {
     exit;
 }
 
-    $sql = "SELECT * FROM tbl_cliente WHERE Username=? AND Password=?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$username,$password]);
-    $user = $stmt->fetch();
-    $num_registers = $stmt->rowCount();
 
-    //Verifica se há algum utilizador com aquele username
-    if ($num_registers==0) {
-        $_SESSION['errors'] = '*Não há utilizadores com esse nome!';
-        header('Location: loginpage.php');
-        closePDO($pdo);
-        exit;
-    }
-    // Verifica se o utilizador está ativo caso exista
-    else if($user === false){
-        $_SESSION['errors'] = '*Esse utilizador já esta logado no site!';
+$sql = "SELECT * FROM tbl_cliente WHERE Username=?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$username]);
+$user = $stmt->fetch();
+$num_registers = $stmt->rowCount();
+
+var_dump($num_registers);
+
+//Verifica se há algum utilizador com aquele username
+if ($num_registers==0) {
+    $_SESSION['errors'] = '*Username não existe!';
+    header('Location: loginpage.php');
+    closePDO($pdo);
+    exit;
+}
+else{
+
+    $username1 = $user['Username'];
+    $password1 = $user['Password'];
+
+    if((strcmp($password1, $password)!== 0)){
+        $_SESSION['errors'] = '*Palavra-passe incorreta!';
         header('Location: loginpage.php');
         closePDO($pdo);
         exit;
     }
     else{
-            if($user=$stmt->fetch()){
-                $username = $user['username'];
-                $password = $user['password'];
-                $validPassword = password_verify($password,$user['password']);
-                if(!$validPassword) {
-                    $_SESSION['errors'] = '*Palavra-passe incorreta!';
-                    header('Location: loginpage.php');
-                    closePDO($pdo);
-                    exit;
-                }
-                else {
 
-                    session_start();
-                    // Se as condições se verificarem todas até cá
-                    $_SESSION['username'] = $username;
-                    $_SESSION['password'] = $password;
-                    $_SESSION['StatusPresença'] = 1;
+        //teste unitários:
+         /*echo "Dados validados<br>";
+         echo "User inserido:$username";
+         echo "<br>";
+         echo "Pass inserida:$password";
+         echo "<br>";
+         echo "Username1:$username1";
+         echo "<br>";
+         echo "Password1: $password1";
+         echo "<br>";*/
 
-                    //Redirecionar para a página desejada
-                    header("Location: initialpage.php");
-                    print "<script>alert('Logado com sucesso!');</script>";
-                    closePDO($pdo);
-                    exit;
-                }
-            }
+
+        session_start();
+        // Se as condições se verificarem todas até cá
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        echo "Sessão iniciada";
+        //Redirecionar para a página desejada
+        header("Location: initialpage.php");
+        print "<script>alert('Logado com sucesso!');</script>";
+        closePDO($pdo);
+        exit;
+
+
+    }
 }
-
 
 
 ?>

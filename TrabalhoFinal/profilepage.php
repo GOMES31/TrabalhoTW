@@ -52,7 +52,13 @@
                 <div class="row col-12">
                     <div class="information">
                         <div class="username-header">
-                            <p class="username text-left" >Darkgamer72</p>
+                            <p class="username text-left" >
+                                <?php
+                                session_start();
+                                if (isset($_SESSION['username'])) {
+                                    echo $_SESSION['username'];
+                                }
+                                ?></p>
                         </div>
                         <div class="specs">
                             <div class="user-sub-header">Join Date</div>
@@ -99,7 +105,6 @@
                                                 N\A
                                             </div>
                                         </div>
-                                        <button class="editS btn">Edit</button>
                                     </div>
                                 </div>
                             </div>

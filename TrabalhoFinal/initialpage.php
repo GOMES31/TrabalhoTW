@@ -29,7 +29,6 @@
                         if (isset($_SESSION['username'])) {
                             echo $_SESSION['username'];
                         }
-                        session_unset();
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
