@@ -14,6 +14,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
+<div id="loader"></div>
 <section>
     <nav class="navbar">
         <div class="collapse navbar-collapse container-fluid">
@@ -31,7 +32,7 @@
                         }
                         ?></button>
                     <ul class="dropdown-menu">
-                        <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i>My Profile</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout
                                 <?php
                                 session_unset();
@@ -67,5 +68,15 @@
         </div>
     </div>
 </section>
+<script>
+    let loader = document.getElementById("loader");
+    window.addEventListener("load",function (){
+        let delay = 1500;
+
+        setTimeout(function(){
+            loader.style.display = "none";
+        },delay);
+    });
+</script>
 </body>
 </html>

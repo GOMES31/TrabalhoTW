@@ -11,6 +11,7 @@
     <script src="jquery/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<div id="loader"></div>
 <div class="header">
     <div class="topleft">
         <a href="index.php"><img src="imgs/dreamteam.png"></a>
@@ -64,5 +65,15 @@
         </form>
     </div>
 </section>
+<script>
+    let loader = document.getElementById("loader");
+    window.addEventListener("load",function (){
+        let delay = 1500;
+
+        setTimeout(function(){
+            loader.style.display = "none";
+        },delay);
+    });
+</script>
 </body>
 </html>

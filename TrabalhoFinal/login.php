@@ -26,7 +26,6 @@ $stmt->execute([$username]);
 $user = $stmt->fetch();
 $num_registers = $stmt->rowCount();
 
-var_dump($num_registers);
 
 //Verifica se há algum utilizador com aquele username
 if ($num_registers==0) {
@@ -62,8 +61,8 @@ else{
 
         session_start();
         // Se as condições se verificarem todas até cá
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
+        $_SESSION['username'] = $username1;
+        $_SESSION['password'] = $password1;
         echo "Sessão iniciada";
         //Redirecionar para a página desejada
         header("Location: initialpage.php");
@@ -74,7 +73,6 @@ else{
 
     }
 }
-
 
 ?>
 </body>

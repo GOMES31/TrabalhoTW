@@ -130,26 +130,41 @@ img{
     background-color: black;
 }
 
-.information .username {
+.username {
     color:white; 
     margin-left:2%; 
     font-size: 35px;
 }
 
-.information .specs {
-    width: 120px; 
+.specs {
+    width: 140px;
     float: left; 
     margin-top: 2%;
 }
 
-.information .specs .user-sub-header {
+.user-sub-header {
     color:#838995;
+    margin-left: 10px;
 }
 
-.information .specs .user-sub-header-content {
+.user-sub-header-content {
     color:white;
 }
 
 .socials {
     color: #838995;
+}
+
+#favPlayers{
+    width: 140px;
+}
+
+#loader{
+    background: #333333 url("imgs/loading.gif") no-repeat center center;
+    background-size: 15%;
+    height: 150vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    animation: 2s infinite ease-in;
 }
