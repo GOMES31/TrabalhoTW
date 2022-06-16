@@ -139,3 +139,8 @@ td{
     z-index: 100;
     animation: 2s infinite ease-in;
 }
+
+form button {
+    color: white;
+    background-color: black;
+}

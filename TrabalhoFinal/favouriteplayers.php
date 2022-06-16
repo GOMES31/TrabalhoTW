@@ -47,9 +47,9 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th class="tableHeader">Player Name</th>
-                                        <th class="tableHeader">Team</th>
-                                        <th class="tableHeader">Nationality</th>
+                                        <th class="tableHeader text-center">Player Name</th>
+                                        <th class="tableHeader text-center">Team</th>
+                                        <th class="tableHeader text-center">Nationality</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,9 +62,9 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td class="btn"><a href="initialpage.php">Add Players</a></td>
-                                        <td class="btn"><i class="fa fa-arrow-circle-left"></i></td>
-                                        <td class="btn"><i class="fa fa-arrow-circle-right"></i></td>
+                                        <td class="btn addbtn"><a href="initialpage.php">Add Players</a></td>
+                                        <td class="btn arrow"><i class="fa fa-arrow-circle-left"></i></td>
+                                        <td class="btn arrow"><i class="fa fa-arrow-circle-right"></i></td>
                                     </tr>
                                 </tfoot>
                             </table>

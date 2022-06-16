@@ -140,3 +140,19 @@ td{
     animation: 2s infinite ease-in;
 }
 
+tfoot .addbtn {
+    background-color: black;
+}
+
+tfoot .arrow {
+    color: white;
+    background-color: black;
+}
+
+tfoot a {
+    color: white;
+}
+
+tfoot:hover a {
+    color: #36454f;
+}

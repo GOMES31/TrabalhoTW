@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Admin page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="favouriteplayers.css">
+    <link rel="stylesheet" href="adminpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -48,9 +48,9 @@
                         <table class="table table-bordered">
                             <thead>
                             <tr>
-                                <th class="tableHeader">Username</th>
-                                <th class="tableHeader">Status Admin (1=Admin, 0=Client)</th>
-                                <th class="tableHeader">Set Admin</th>
+                                <th class="tableHeader text-center">Username</th>
+                                <th class="tableHeader text-center">Status Admin (1=Admin, 0=Client)</th>
+                                <th class="tableHeader text-center">Set Admin</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -78,14 +78,14 @@
                                             if($row->StatusAdmin==1){
                                                 echo'<td>
                                             <form method="post" action="removeAdmin.php">
-                                                <button type="submit" name="changeStatus">Remove Admin</button>
+                                                <button type="submit" name="changeStatus" class="btn">Remove Admin</button>
                                             </form>
                                             </tr></tr>';
                                             }
                                             else{
                                                 echo'<td>
                                             <form method="post" action="setAdmin.php">
-                                                <button type="submit" name="changeStatus">Set Admin</button>
+                                                <button type="submit" name="changeStatus" class="btn">Set Admin</button>
                                             </form>
                                             </tr></tr>';
                                             }
