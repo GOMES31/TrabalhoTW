@@ -51,6 +51,27 @@
                 </div>
             </form>
             </div>
+            <div class="players">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="tableHeader text-center">Player Name</th>
+                                <th class="tableHeader text-center">Team</th>
+                                <th class="tableHeader text-center">Nationality</th>
+                                <th class="tableHeader text-center">Fav</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="player_search_1">
+                                <td>No player found</td>
+                                <td>No team found</td>
+                                <td>No nationality found</td>
+                                <td><button type="submit" id="starIcon" class="fa fa-star"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col-md-12"></div>
+                </div>
         </div>
     </div>
 
