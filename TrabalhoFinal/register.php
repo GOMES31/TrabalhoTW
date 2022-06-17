@@ -3,14 +3,14 @@
 <?php
 header("content-Type:text/html; charset=ISO-8859-11", true);
 include "db_connect.php";
-
-session_start();
-
 $pdo = openPDO('db_users');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirmPassword'];
+
+session_start();
+
 if (empty($username) || empty($password) || empty($confirmPassword)) {
     $_SESSION['errors'] = '*Preencha todos os campos!';
     header('Location: registerpage.php');
@@ -43,8 +43,8 @@ if ($stmt->rowCount() == 0) {
 
     ]);
 
-    session_start();
     // Iniciar sessão e setar o que é preciso para logar
+    session_start();
     $_SESSION['username'] = $newUser;
     $_SESSION['password'] = $newUserPass;
 

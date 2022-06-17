@@ -1,6 +1,7 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
@@ -14,7 +15,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-
 <body>
 <div id="loader"></div>
 <section>
@@ -43,30 +43,52 @@
             <div class="row">
                 <div class="row col-12">
                     <img class="img" id="dreamteam-large" src="imgs/dreamteam_large.png">
-                    <form class="navbar-form navbar-center" role="search">
+                    <form method="post" class="navbar-form navbar-center" role="search">
                         <div class="form-group">
-                            <input id="searchInput" type="text" class="form-control" placeholder="Search for football players...">
-                            <button type="submit" id="searchIcon" class="fa fa-search"></button>
+                            <input type="text" name="playerName" class="form-control" id="searchInput" placeholder="Search for football players...">
+                            <input type="submit" value="Search" name="search" id="searchIcon" class="fa fa-search">
                         </div>
                     </form>
                 </div>
                 <div class="players">
                     <table class="table table-bordered">
                         <thead>
-                            <tr>
-                                <th class="tableHeader text-center">Player Name</th>
-                                <th class="tableHeader text-center">Team</th>
-                                <th class="tableHeader text-center">Nationality</th>
-                                <th class="tableHeader text-center">Fav</th>
-                            </tr>
+                        <tr>
+                            <th class="tableHeader text-center">Player Name</th>
+                            <th class="tableHeader text-center">Team</th>
+                            <th class="tableHeader text-center">Nationality</th>
+                            <th class="tableHeader text-center">Fav</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <tr class="player_search_1">
-                                <td>No player found</td>
-                                <td>No team found</td>
-                                <td>No nationality found</td>
-                                <td><button type="submit" id="starIcon" class="fa fa-star"></button></td>
-                            </tr>
+                        <?php
+                            include "db_connect.php";
+                            $pdo = openPDO('db_players');
+                            //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+                            if(isset($_POST['search'])) {
+                                $player = $_POST['playerName'];
+                                $sql = "SELECT * FROM tbl_players WHERE Nome=?";
+                                $stmt = $pdo->prepare($sql);
+                                $sql_execute = $stmt->execute([$player]);
+                                $results = $stmt->fetchAll();
+                                $num_registers = $stmt->rowCount();
+                                if ($num_registers == 0) {
+                                    echo '<tr class="player_tr_1">
+                                        <td colspan="15"> No players found</td>
+                                       </tr>';
+                                } else {
+                                    foreach ($results as $row) {
+                                        echo "<tr><td>";
+                                        echo $row['Nome'];
+                                        echo '</td><td>';
+                                        echo $row['Equipa'];
+                                        echo '</td><td>';
+                                        echo $row['Nacionalidade'];
+                                        echo '</td><td><button type="submit" id="starIcon" class="fa fa-star"></button></td></tr>';
+                                    }
+                                }
+                            }
+                        ?>
                         </tbody>
                     </table>
                     <div class="col-md-12"></div>
@@ -94,5 +116,4 @@
         });
     </script>
 </body>
-
 </html>

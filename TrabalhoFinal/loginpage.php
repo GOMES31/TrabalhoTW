@@ -52,7 +52,7 @@
                 <p>Ainda não tem conta?<a href="registerpage.php">Criar conta</a></p>
             </div>
             <?php
-            if (isset($_SESSION['errors'])) {
+            if(isset($_SESSION['errors'])) {
                 echo $_SESSION['errors'];
             }
             ?>

@@ -1,5 +1,6 @@
 <?php
 
+
 function openPDO($db)
 {
     $host = 'localhost';
