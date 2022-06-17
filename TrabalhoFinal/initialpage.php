@@ -67,7 +67,6 @@
                                 <td>No nationality found</td>
                                 <td><button type="submit" id="starIcon" class="fa fa-star"></button></td>
                             </tr>
-
                         </tbody>
                     </table>
                     <div class="col-md-12"></div>

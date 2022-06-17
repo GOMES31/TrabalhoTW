@@ -161,3 +161,9 @@ td{
     z-index: 100;
     animation: 2s infinite ease-in;
 }
+table td {
+    background-color:  rgba(0, 0, 0, 0.50);
+}
+table th {
+    background-color:  rgba(0, 0, 0, 0.50);
+}

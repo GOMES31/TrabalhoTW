@@ -130,9 +130,7 @@ td{
     color: #838995;
 }
 
-
-
-form button {
+form .btn {
     color: white;
     background-color: black;
 }
