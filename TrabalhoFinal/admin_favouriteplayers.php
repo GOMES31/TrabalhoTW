@@ -28,7 +28,7 @@
                     <li class="dropdown">
                         <button class="dropbtn btn" data-toggle="dropdown">
                             <?php
-                                session_start();
+                            session_start();
                             if (isset($_SESSION['username'])) echo $_SESSION['username'];
                             session_write_close();
                             ?></button>

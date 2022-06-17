@@ -28,14 +28,17 @@
                 <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
-                            session_start();
-                            if(isset($_SESSION['username'])) echo $_SESSION['username'];
-                            session_write_close();
+                        session_start();
+                        if (isset($_SESSION['username'])) echo $_SESSION['username'];
+                        session_write_close();
                         ?></button>
                     <ul class="dropdown-menu">
-                        <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i>Admin Panel</a></li>
-                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout </a></li><?php session_unset();?>
+                        <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i
+                                        class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="adminpage.php" class="dropdown-item waves-effect waves-light"><i
+                                        class="fa fa-hammer"></i>Admin Panel</a></li>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i
+                                        class="fa fa-power-off"></i>Logout </a></li><?php session_unset(); ?>
                     </ul>
                 </li>
             </div>
@@ -51,60 +54,105 @@
                             <?php
                             if (isset($_SESSION['username'])) echo $_SESSION['username'];
                             ?></p>
-                    </div>
-                    <div class="specs">
-                        <div class="user-sub-header"><h4>Join Date<h4>
-                            <div class="user-sub-header-content"><h5>17.01.19</h5></div>
                         </div>
+                                <?php
+                                include "db_connect.php";
+                                session_start();
+                                $pdo = openPDO('db_users');
 
-                    </div>
-                    <div class="specs">
-                        <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
-                            <div class="user-sub-header-content"><h5>0</h5></div>
-                        </div>
-                        <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="container pt-5">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="m_box">
-                                    <div class="border-bottom font-weight-bold w-100 pb-1"> Social Media Links</div>
-                                    <div class="row mt-3">
-                                        <div class="socials col-12 pl-0">
-                                            <i class="fab fa-twitter twitter-color"></i>
-                                            N\A
+
+                                $user = $_SESSION['username'];
+
+                                $sql = "SELECT * FROM tbl_cliente WHERE Username=?";
+                                $stmt = $pdo->prepare($sql);
+                                $sql_execute = $stmt->execute([$user]);
+                                $results = $stmt->fetch();
+                                $num_registers = $stmt->rowCount();
+                                if ($num_registers == 0) {
+                                    echo '<div class="specs">
+                                                <div class="user-sub-header"><h4 id="favPlayers">Join Date</h4>
+                                                    <div class="user-sub-header-content"><h5>Undefined</h5></div>
+                                                </div>
+                                            </div>';
+                                } else {
+                                    echo '<div class="specs">
+                                            <div class="user-sub-header"><h4>Join Date<h4>
+                                                <div class="user-sub-header-content"><h5>';
+                                    echo $results['DataEntrada'];
+                                    echo '<h5></div>
                                         </div>
+                                    </div>';
+                                }
+                                echo '<div class="specs">
+                                    <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
+                                        <div class="user-sub-header-content"><h5>0</h5></div>
                                     </div>
-
-
-                                    <div class="row mt-3">
-                                        <div class="socials col-12 pl-0">
-                                            <i class="fab fa-facebook facebook-color"></i>
-                                            N\A
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt-3">
-                                        <div class="socials col-12 pl-0">
-                                            <i class="fab fa-youtube youtube-color"></i>
-                                            N\A
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt-3">
-                                        <div class="socials col-12 pl-0">
-                                            <i class="fab fa-twitch twitch-color"></i>
-                                            N\A
-                                        </div>
-                                    </div>
+                                    <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="container pt-5">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="m_box">
+                                                <div class="border-bottom font-weight-bold w-100 pb-1"> Social Media Links</div>';
+                                            $sql = "SELECT * FROM tbl_cliente WHERE Username=?";
+                                            $stmt = $pdo->prepare($sql);
+                                            $sql_execute = $stmt->execute([$user]);
+                                            $results = $stmt->fetch();
+                                            $num_registers = $stmt->rowCount();
+                                            if ($num_registers == 0) {
+                                                    echo '<div class="row mt-3">
+                                                                <div class="socials col-12 pl-0">
+                                                                    <i class="fab fa-twitter twitter-color"></i>
+ 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="socials col-12 pl-0">
+                                                                    <i class="fab fa-facebook facebook-color"></i>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="row mt-3">
+                                                                <div class="socials col-12 pl-0">
+                                                                    <i class="fab fa-youtube youtube-color"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="socials col-12 pl-0">
+                                                                    <i class="fab fa-twitch twitch-color"></i>
+                                                                </div>
+                                                            </div>';
+                                            } else {
+                                                echo '<div class="row mt-3">
+                                                                        <div class="socials col-12 pl-0">
+                                                                            <i class="fab fa-twitter twitter-color"></i>';
+                                                echo $results['Twitter'];
+                                                echo '</div>
+                                                                    </div>
+                                                                    <div class="row mt-3">
+                                                                        <div class="socials col-12 pl-0">
+                                                                            <i class="fab fa-facebook facebook-color"></i>';
+                                                echo $results['Facebook'];
+                                                echo '<div class="row mt-3">
+                                                                        <div class="socials col-12 pl-0">
+                                                                            <i class="fab fa-youtube youtube-color"></i>';
+                                                echo $results['Youtube'];
+                                                echo '</div>
+                                                                    </div>
+                                                                    <div class="row mt-3">
+                                                                        <div class="socials col-12 pl-0">
+                                                                            <i class="fab fa-twitch twitch-color"></i>';
+                                                echo $results['Twitch'];
+                                                echo '</div>
+                                                                    </div>';
+                                            }
+                                            ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
