@@ -31,7 +31,7 @@
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i> Admin Panel</a></li>
+                        <li><a href="adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i> Controll Users</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_destroy();?>
                     </ul>
                 </li>
@@ -58,7 +58,7 @@
                                 include "db_connect.php";
 
                                 $pdo = openPDO('db_users');
-                                $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                                $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 
                                 $sql = "SELECT * FROM tbl_cliente";
                                 $stmt = $pdo->query($sql);
@@ -68,18 +68,17 @@
                                         <td colspan="15"> No users found</td>
                                        </tr>';
                                     } else {
-                                        while($row = $stmt->fetch(PDO::FETCH_OBJ)) {
-                                            $username = $row->Username;
+                                        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                             echo "<tr><td>";
-                                            echo $row->Username;
+                                            echo $row['Username'];
                                             echo "</td><td>";
-                                            echo $row->StatusAdmin;
-                                            $_COOKIE['user'] = $username;
-                                            echo '</td>
-                                             <form action="removeUsers.php">
-                                                 <button type="submit">Remove User</button>
-                                            </form>
-                                            </td></tr>';
+                                            echo $row['StatusAdmin'];
+                                            echo "</td><td>";
+                                            echo '<form action="removeUsers.php" method="post">
+                                                <input type="hidden" name="id" value='.$row['id'].'>
+                                                <input type="submit" name="delete" value="Delete user">
+                                            </form>';
+                                            echo"</td></tr>";
                                         }
                                 }
                             ?>

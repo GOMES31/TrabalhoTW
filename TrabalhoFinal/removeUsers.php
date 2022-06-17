@@ -5,10 +5,15 @@ include "db_connect.php";
 $pdo = openPDO('db_users');
 
 
-    $username = $_REQUEST['user'];
+    $userId = $_POST['id'];
 
-    $sql = "DELETE FROM tbl_cliente WHERE Username=?";
+    $sql = "DELETE FROM tbl_cliente WHERE id=?";
     $stmt = $pdo->prepare($sql);
-    $sql_execute = $stmt->execute([$username]);
+    $sql_execute = $stmt->execute([$userId]);
 
-    var_dump($username);
+    if($sql_execute){
+        echo 'Utilizador removido com sucesso!';
+        header('Location: adminpage.php');
+        closePDO($pdo);
+        exit;
+    }
