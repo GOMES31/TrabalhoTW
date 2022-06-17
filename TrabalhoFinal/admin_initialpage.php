@@ -65,7 +65,6 @@
                         <?php
                         include "db_connect.php";
                         $pdo = openPDO('db_players');
-                        //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
                         if(isset($_POST['search'])) {
                             $player = $_POST['playerName'];
                             $sql = "SELECT * FROM tbl_players WHERE Nome=?";

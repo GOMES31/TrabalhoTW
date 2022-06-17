@@ -36,9 +36,7 @@
                 <div class="information">
                     <h3>Dream Team</h3>
                     <p>Bem vindos ao nosso website, aqui pode saber todos os dados dos seus jogadores de futebol
-                        favoritos! E para animar a sua estadia no nosso website desenvolvemos uma ferramenta do tipo
-                        "squad builder" em que pode juntar os seus jogadores favoritos para criar e guardar as suas
-                        "Dream Team's".</p>
+                        favoritos! E para animar a sua estadia no nosso website pode escolher os seus jogadores favoritos.</p>
                 </div>
             </div>
         </div>
