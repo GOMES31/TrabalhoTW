@@ -140,3 +140,7 @@ td{
     animation: 2s infinite ease-in;
 }
 
+form #trashIcon {
+    background: transparent;
+    border: none;
+}
