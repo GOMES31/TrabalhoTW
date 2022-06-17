@@ -38,6 +38,7 @@ else{
 
     $username1 = $user['Username'];
     $password1 = $user['Password'];
+    $statusAdmin = $user['StatusAdmin'];
 
     if((strcmp($password1, $password)!== 0)){
         $_SESSION['errors'] = '*Palavra-passe incorreta!';
@@ -46,17 +47,30 @@ else{
         exit;
     }
     else{
-
-        // Se as condições se verificarem todas até cá
-        session_start();
-        $_SESSION['username'] = $username1;
-        $_SESSION['password'] = $password1;
-        echo "Sessão iniciada";
-        //Redirecionar para a página desejada
-        header("Location: initialpage.php");
-        print "<script>alert('Logado com sucesso!');</script>";
-        closePDO($pdo);
-        exit;
+        if($statusAdmin==0){
+            // Se as condições se verificarem todas até cá
+            session_start();
+            $_SESSION['username'] = $username1;
+            $_SESSION['password'] = $password1;
+            echo "Sessão iniciada";
+            //Redirecionar para a página desejada
+            header("Location: initialpage.php");
+            print "<script>alert('Logado com sucesso!');</script>";
+            closePDO($pdo);
+            exit;
+        }
+        else{
+            // Se as condições se verificarem todas até cá
+            session_start();
+            $_SESSION['username'] = $username1;
+            $_SESSION['password'] = $password1;
+            echo "Sessão iniciada";
+            //Redirecionar para a página desejada
+            header("Location: admin_initialpage.php");
+            print "<script>alert('Logado com sucesso!');</script>";
+            closePDO($pdo);
+            exit;
+        }
 
 
     }
