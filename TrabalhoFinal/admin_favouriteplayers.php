@@ -80,7 +80,7 @@
                                         echo "</td><td>";
                                         echo $row['Nacionalidade'];
                                         echo "</td><td>";
-                                        echo '<form action="removePlayer.php" method="post">
+                                        echo '<form action="admin_removePlayer.php" method="post">
                                                 <input type="hidden" name="id" value='.$row['id'].'>
                                                 <button type="submit" id="trashIcon" class="btn fa fa-trash"></button></td></tr>
                                             </form>';
