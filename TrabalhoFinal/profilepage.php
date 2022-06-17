@@ -100,7 +100,7 @@
                                                     <div class="user-sub-header-content"><h5>';
                                 echo $results;
                                 echo'</h5></div></div>
-                                                    <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
+                                                    <button class="btn"><a href="favouriteplayers.php">See favourite players</a></button>
                                                 </div>
                                             </div>';
                             }

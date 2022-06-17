@@ -54,6 +54,7 @@
                                         <th class="tableHeader text-center">Player Name</th>
                                         <th class="tableHeader text-center">Team</th>
                                         <th class="tableHeader text-center">Nationality</th>
+                                        <th class="tableHeader text-center">Remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
