@@ -148,7 +148,7 @@ td{
     border: none;
 }
 
-#starIcon:active {
+#starIcon:focus {
     color: yellow;
 }
 
