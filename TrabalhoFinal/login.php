@@ -4,7 +4,6 @@
 header("content-Type:text/html; charset=ISO-8859-11", true);
 include "db_connect.php";
 
-session_start();
 
 $pdo = openPDO('db_users');
 
@@ -35,7 +34,6 @@ if ($num_registers==0) {
     exit;
 }
 else{
-
     $username1 = $user['Username'];
     $password1 = $user['Password'];
     $statusAdmin = $user['StatusAdmin'];
@@ -47,22 +45,23 @@ else{
         exit;
     }
     else{
-        // Se as condições se verificarem todas até cá
         session_start();
-        $_SESSION['username'] = $username1;
-        $_SESSION['password'] = $password1;
-        echo "Sessão iniciada";
-        if($statusAdmin==0){
-            //Redirecionar para a página desejada
-            header("Location: initialpage.php");
+        if($statusAdmin==1){
+            $_SESSION['username'] = $username1;
+            $_SESSION['password'] = $password1;
+            header("Location: admin_initialpage.php");
+            print "<script>alert('Logado com sucesso!');</script>";
+            closePDO($pdo);
+            exit;
         }
         else{
-            //Redirecionar para a página desejada
-            header("Location: admin_initialpage.php");
-        }
+        $_SESSION['username'] = $username1;
+        $_SESSION['password'] = $password1;
+        header("Location:initialpage.php");
         print "<script>alert('Logado com sucesso!');</script>";
         closePDO($pdo);
         exit;
+        }
     }
 }
 

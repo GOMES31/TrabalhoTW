@@ -69,18 +69,19 @@
                                        </tr>';
                                     } else {
                                         while($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+                                            $username = $row->Username;
                                             echo "<tr><td>";
                                             echo $row->Username;
                                             echo "</td><td>";
                                             echo $row->StatusAdmin;
-                                            echo '</td><td>
-                                            <form method="POST" action="removeUsers.php">
-                                                <button type="submit" name="removeUser" value="<?=$row->Username;?>">Remove User</button>
-                                            </form> 
+                                            $_COOKIE['user'] = $username;
+                                            echo '</td>
+                                             <form action="removeUsers.php">
+                                                 <button type="submit">Remove User</button>
+                                            </form>
                                             </td></tr>';
                                         }
                                 }
-
                             ?>
                             </tbody>
                         </table>

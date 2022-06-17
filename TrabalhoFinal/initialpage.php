@@ -26,7 +26,7 @@
                 <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
-                        if (isset($_SESSION['username'])) echo $_SESSION['username'];
+                        if(isset($_SESSION['username'])) echo $_SESSION['username'];
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i>My Profile</a></li>

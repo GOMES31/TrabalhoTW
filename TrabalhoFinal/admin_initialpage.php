@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
+
 <div id="loader"></div>
 <section>
     <nav class="navbar">
@@ -26,7 +28,7 @@
                 <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
-                        if (isset($_SESSION['username'])) echo $_SESSION['username'];
+                        if(isset($_SESSION['username'])) echo $_SESSION['username'];
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i>My Profile</a></li>

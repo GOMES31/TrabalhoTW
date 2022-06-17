@@ -13,18 +13,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
-<script>
-    function loadingPage(){
-        let loader = document.getElementById("loader");
-        window.addEventListener("load",function (){
-            let delay = 1700;
-
-            setTimeout(function(){
-                loader.style.display = "none";
-            },delay);
-        });
-    }
-</script>
 <body>
 <div id="loader"></div>
 <section>
