@@ -83,14 +83,33 @@
                                         </div>
                                     </div>';
                                 }
-                                echo '<div class="specs">
-                                    <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
-                                        <div class="user-sub-header-content"><h5>0</h5></div>
-                                    </div>
-                                    <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
-                                </div>
-                            </div>
-                            <div class="row">
+
+                                $sql = "SELECT * FROM tbl_favplayers WHERE Username=?";
+                                $stmt = $pdo->prepare($sql);
+                                $sql_execute = $stmt->execute([$user]);
+                                $results = $stmt->fetchColumn();
+                                $num_registers = $stmt->rowCount();
+                                if($num_registers ==0){
+                                    echo '<div class="specs">
+                                        <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
+                                            <div class="user-sub-header-content"><h5>0</h5></div></div>
+                                            <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
+                                        </div>
+                                    </div>';
+                                }
+                                else{
+                                    echo '<div class="specs">
+                                        <div class="user-sub-header"><h4 id="favPlayers">Favourite players</h4>
+                                            <div class="user-sub-header-content"><h5>';
+                                        echo $results;
+                                        echo'</h5></div></div>
+                                            <button class="btn"><a href="admin_favouriteplayers.php">See favourite players</a></button>
+                                        </div>
+                                    </div>';
+                                }
+
+
+                                echo '<div class="row">
                                 <div class="container pt-5">
                                     <div class="row">
                                         <div class="col-md-4">
@@ -177,5 +196,4 @@
     });
 </script>
 </body>
-
 </html>
