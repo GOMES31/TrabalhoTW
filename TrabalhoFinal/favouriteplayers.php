@@ -52,15 +52,41 @@
                                         <th class="tableHeader text-center">Player Name</th>
                                         <th class="tableHeader text-center">Team</th>
                                         <th class="tableHeader text-center">Nationality</th>
+                                        <th class="tableHeader text-center">Remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="player_tr_1">
-                                        <td>No player found</td>
-                                        <td>No team found</td>
-                                        <td>No nationality found</td>
-                                    </tr>
+                                <?php
+                                include "db_connect.php";
+                                $user = $_SESSION['username'];
+                                $pdo = openPDO('db_users');
+                                $sql = "SELECT * FROM tbl_favplayers WHERE Username=?";
+                                $stmt = $pdo->prepare($sql);
+                                $sql_execute = $stmt->execute([$user]);
+                                $results = $stmt->fetchAll();
+                                $num_registers = $stmt->rowCount();
 
+                                if($num_registers == 0) {
+                                    echo '<tr class="player_tr_1">
+                                        <td colspan="15"> No players found</td>
+                                       </tr>';
+                                } else {
+                                    foreach($results as $row) {
+                                        echo "<tr><td>";
+                                        echo $row['Nome'];
+                                        echo "</td><td>";
+                                        echo $row['Equipa'];
+                                        echo "</td><td>";
+                                        echo $row['Nacionalidade'];
+                                        echo "</td><td>";
+                                        echo '<form action="removePlayer.php" method="post">
+                                                <input type="hidden" name="id" value='.$row['id'].'>
+                                                <button type="submit" id="trashIcon" class="fa fa-trash"></button></td></tr>
+                                            </form>';
+                                        echo"</td></tr>";
+                                    }
+                                }
+                                ?>
                                 </tbody>
                             </table>
                             <div class="col-md-12"></div>

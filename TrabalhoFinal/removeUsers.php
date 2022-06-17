@@ -12,7 +12,6 @@ $pdo = openPDO('db_users');
     $sql_execute = $stmt->execute([$userId]);
 
     if($sql_execute){
-        echo 'Utilizador removido com sucesso!';
         header('Location: adminpage.php');
         closePDO($pdo);
         exit;

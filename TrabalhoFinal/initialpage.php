@@ -66,6 +66,7 @@
                         <?php
                             include "db_connect.php";
                             $pdo = openPDO('db_players');
+                            $user = $_SESSION['username'];
                             if(isset($_POST['search'])) {
                                 $player = $_POST['playerName'];
                                 $sql = "SELECT * FROM tbl_players WHERE Nome=?";
@@ -85,7 +86,13 @@
                                         echo $row['Equipa'];
                                         echo '</td><td>';
                                         echo $row['Nacionalidade'];
-                                        echo '</td><td><button type="submit" id="starIcon" class="fa fa-star"></button></td></tr>';
+                                        echo '</td><td><form method="post" action="addPlayer.php">
+                                                <input type="hidden" name="user" value='.$user.'>
+                                                <input type="hidden" name="pTeam" value='.$row['Equipa'].'>
+                                                <input type="hidden" name="pName" value='.$row['Nome'].'>
+                                                <input type="hidden" name="pNationality" value='.$row['Nacionalidade'].'>
+                                            <button type="submit" id="starIcon" class="fa fa-star"></button></td></tr>
+                                        </form>';
                                     }
                                 }
                             }
