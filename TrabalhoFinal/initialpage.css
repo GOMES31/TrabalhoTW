@@ -117,6 +117,41 @@ img{
     padding-top: 6px;
 }
 
+th {
+    width: 33%;
+}
+
+tfoot{
+    border: none;
+}
+
+.header_mid {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.players {
+    margin-top: 3%;
+}
+
+.tableHeader {
+    color: #86c232;
+}
+
+td{
+    color: #838995;
+}
+
+#starIcon {
+    background-color: transparent;
+    border: none;
+}
+
+#starIcon:active {
+    color: yellow;
+}
+
 #loader{
     background: #333333 url("imgs/loading.gif") no-repeat center center;
     background-size: 15%;

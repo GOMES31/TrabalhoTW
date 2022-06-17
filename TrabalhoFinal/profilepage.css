@@ -180,3 +180,12 @@ img{
     z-index: 100;
     animation: 2s infinite ease-in;
 }
+
+.specs a {
+    color: white;
+}
+
+.specs:hover a {
+    color: #36454f;
+    background-color: #86c232;
+}
