@@ -36,7 +36,7 @@
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="admin_adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i> Controll Users</a></li>
+                        <li><a href="admin_adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i>Admin Panel</a></li>
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout </a></li><?php session_destroy();?>
                     </ul>
                 </li>
