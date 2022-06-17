@@ -28,12 +28,14 @@
                 <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
-                        if(isset($_SESSION['username'])) echo $_SESSION['username'];
+                            session_start();
+                            if (isset($_SESSION['username'])) echo $_SESSION['username'];
+                            session_write_close();
                         ?>
                     </button>
                     <ul class="dropdown-menu">
                         <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i>My Profile</a></li>
-                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_destroy();?>
+                        <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_unset();?>
                     </ul>
                 </li>
             </div>
