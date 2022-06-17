@@ -30,12 +30,8 @@
                         if (isset($_SESSION['username'])) echo $_SESSION['username'];
                         ?></button>
                     <ul class="dropdown-menu">
-<<<<<<< Updated upstream
-                        <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
-=======
                         <li><a href="admin_profilepage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-user"></i> My Profile</a></li>
                         <li><a href="admin_adminpage.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-hammer"></i> Controll Users</a></li>
->>>>>>> Stashed changes
                         <li><a href="index.php" class="dropdown-item waves-effect waves-light"><i class="fa fa-power-off"></i>Logout</a></li><?php session_destroy();?>
                     </ul>
                 </li>
