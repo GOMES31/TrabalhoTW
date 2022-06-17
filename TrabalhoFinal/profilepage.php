@@ -28,11 +28,7 @@
                 <li class="dropdown">
                     <button class="dropbtn btn" data-toggle="dropdown">
                         <?php
-                        session_start();
-                        if (isset($_SESSION['username'])) {
-                            echo $_SESSION['username'];
-                        }
-                        session_unset();
+                        if (isset($_SESSION['username'])) echo $_SESSION['username'];
                         ?></button>
                     <ul class="dropdown-menu">
                         <li><a href="profilepage.php" class="dropdown-item waves-effect waves-light"><i

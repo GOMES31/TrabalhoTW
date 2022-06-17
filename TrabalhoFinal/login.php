@@ -47,32 +47,22 @@ else{
         exit;
     }
     else{
+        // Se as condições se verificarem todas até cá
+        session_start();
+        $_SESSION['username'] = $username1;
+        $_SESSION['password'] = $password1;
+        echo "Sessão iniciada";
         if($statusAdmin==0){
-            // Se as condições se verificarem todas até cá
-            session_start();
-            $_SESSION['username'] = $username1;
-            $_SESSION['password'] = $password1;
-            echo "Sessão iniciada";
             //Redirecionar para a página desejada
             header("Location: initialpage.php");
-            print "<script>alert('Logado com sucesso!');</script>";
-            closePDO($pdo);
-            exit;
         }
         else{
-            // Se as condições se verificarem todas até cá
-            session_start();
-            $_SESSION['username'] = $username1;
-            $_SESSION['password'] = $password1;
-            echo "Sessão iniciada";
             //Redirecionar para a página desejada
             header("Location: admin_initialpage.php");
-            print "<script>alert('Logado com sucesso!');</script>";
-            closePDO($pdo);
-            exit;
         }
-
-
+        print "<script>alert('Logado com sucesso!');</script>";
+        closePDO($pdo);
+        exit;
     }
 }
 
